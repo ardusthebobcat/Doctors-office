@@ -1,0 +1,17 @@
+<h1>Doctors</h1>
+<a href="/"> Home page </a>
+<ul>
+  <% @doctors.each() do |doctor| %>
+  <li><a href='/patient/<%= doctor.id %>'><%= doctor.name %></a></li>
+  <% end %>
+</ul>
+
+<form action="/add_doctor" method="post">
+  <label for="name">Name</label>
+  <input type="text" name="name">
+
+  <label for="specialty">Specialty</label>
+  <input type="text" name="specialty">
+
+  <button name="btn btn-success" >Add Doctor</button>
+</form>

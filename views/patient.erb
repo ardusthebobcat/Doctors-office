@@ -1,0 +1,19 @@
+<h1><%= @doctor.name %></h1>
+
+<h3>Patient List</h3>
+
+<ul>
+  <%  %>
+</ul>
+
+<h3>Add a Patient</h3>
+<form action="/add_patient" method="post">
+  <input name= "doctor_id" type='hidden' value ='<%= @id%>'>
+  <label for="name">Name</label>
+  <input type="text" name="name">
+
+  <label for="birthdate">Birthday</label>
+  <input type="text" name="birthdate">
+
+  <button name="btn btn-success" >Add Patient</button>
+</form>
